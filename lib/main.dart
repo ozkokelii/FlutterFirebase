@@ -1,7 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-
-import 'login_islemleri.dart';
+import 'package:flutter_firebase/firestore_islemleri.dart';
 
 void main() {
   runApp(MyApp());
@@ -39,7 +38,7 @@ class App extends StatelessWidget {
           );
         }
         if (snapshot.connectionState == ConnectionState.done) {
-          return LoginIslemleri();
+          return FirestoreIslemleri();
         }
         return Scaffold(
           body: Center(
